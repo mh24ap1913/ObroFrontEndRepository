@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+  <span>Lets Play</span>
+   </mat-toolbar>
+   
+<div class="container" style="max-width: 600px;background-color: turquoise;">
+    <h2>Obro Services Login</h2>
+    <form #loginform="ngForm" (ngSubmit)="loginUser()">
+      {{loginform.form.valid}}
+      <small class="text-danger">{{msg}}</small>
+      <div class="form-group">
+        <label for="username">username:</label>
+        <input type="username" class="form-control" id="username" placeholder="Enter username" name="username" [(ngModel)]="user.username" required  #username="ngModel"
+        [class.is-invalid]="username.invalid && username.touched">
+        <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username are required</small>
+      </div> 
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" [(ngModel)]="user.password" required #password="ngModel"
+        [class.is-invalid]="password.invalid && password.touched">
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password are required</small>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="remember"> Remember me</label>
+      </div>
+      <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-info" [routerLink]="['/loginsuccess']">Login</button>
+    </form>
+    <small class="float-right" [routerLink]="['/registration']">New User? Register Here</small>
+  </div>
+  <footer class="footer bg-dark fixed-bottom">
+    <div class="text-white text-right mr-3">
+      Copyright goes only obro
+    </div>
+  </footer>
