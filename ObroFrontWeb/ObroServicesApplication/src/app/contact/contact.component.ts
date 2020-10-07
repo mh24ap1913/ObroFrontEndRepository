@@ -11,5 +11,7 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  title = 'My first AGM project';
+  lat = 51.678418;
+  lng = 7.809007;
 }

@@ -1,0 +1,10 @@
+agm-map {
+    height: 300px;
+  }
+
+  :host {
+    display: block;
+    background-color: yellow;
+    text-emphasis-color: white;
+   
+   }

@@ -1,0 +1,51 @@
+:host {
+    display: block;
+    background-color: black;
+    text-emphasis-color: white;
+   
+   }
+   
+   
+   .home-container {
+   color: var(--col-pale);
+   height: 100vh;
+   font-family: "roboto-reg";
+   overflow-y: hidden;
+   }
+
+   .ser_img{
+    max-width: 600px;
+    max-width: 600px;
+    margin: 50px auto;
+}
+.ser_img{
+    width: 100%;
+    outline: none;
+}
+
+.ser_img {
+    width: inherit;
+    height: inherit;
+}
+
+.ser_img{
+    overflow: visible;
+}
+
+.ser_img {
+    display: flex !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s;
+    z-index: -1;
+}
+
+.ser_img{
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.ser_img{
+     z-index: 20;
+}

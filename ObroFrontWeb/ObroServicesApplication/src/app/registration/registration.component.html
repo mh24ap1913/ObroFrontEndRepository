@@ -1,15 +1,10 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a href="#" class="navbar-brand">Obro Services Registration</a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="container" style="max-width: 600px;background-color: turquoise;">
-    <h2 class="textual">ObroServices-Registration</h2>
+<mat-toolbar color="primary">
+  <a href="#" class="pull-left"><img class="logo-img" src="../../assets/logo.jpg" alt=" "></a>
+  <marquee style="color:Yellow;"direction = "left">Welcome To ObroServices,Your Need Our Service</marquee>
+
+   </mat-toolbar><br><br>
+<div class="container" style="max-width: 600px;background-color: gray">
+    <h2 class="headertekst">ObroServices-Registration</h2>
     <form #Registerform="ngForm" (ngSubmit)="registerUser()">
       <small>{{msg}}</small>
       <div class="form-group">

@@ -1,34 +1,92 @@
 <mat-toolbar color="primary" class="mat-evalution-z6">
-  
+ <div class=logo_area>
+  <a href="#" class="pull-left"><img class="logo-img" src="../../assets/logo.jpg" alt=" "></a>
+ </div>
+
 <div class="spacer"></div>
 
-   <a mat-button [routerLink]="['/service']">Services</a>
-   <a mat-button [routerLink]="['/contact']">Contact</a>
-   <a mat-button [routerLink]="['/about']">About Us</a>
- </mat-toolbar>
- <div class="container text-center">
-  <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide>
-      <img src="../../assets/obro1.jpg.webp">
-    </ng-template>  
-    <ng-template carouselSlide> 
-      <img src="../../assets/obro2.jpg.webp">
-    </ng-template>  
-    <ng-template carouselSlide>
-      <img src="../../assets/obro3.jpg.jpg">
-    </ng-template>  
-    <ng-template carouselSlide>
-      <img src="../../assets/obro4.jpg.jpg">
-    </ng-template> 
-    <ng-template carouselSlide>
-      <img src="../../assets/obro5.jpg.webp">
-    </ng-template>
-    <ng-template carouselSlide>
-      <img src="../../assets/obro6.jpg.jpg">
-    </ng-template>
-    <ng-template carouselSlide>
-      <img src="../../assets/obro7.jpg.png">
-    </ng-template>
-  </owl-carousel-o>
+   <div class="pull-right">
+    <a mat-button [routerLink]="['/service']">Services</a>
+    <a mat-button [routerLink]="['/contact']">Contact</a>
+    <a mat-button [routerLink]="['/about']">About Us</a> 
+   </div>
+ </mat-toolbar><br>
+ 
+  <ngb-carousel #ngcarousel>
+  <ng-template ngbSlide id="one">
+    <div class="picsum-img-wrapper">
+      <img src="../../assets/o1.webp" alt="Slide 1">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide id="two">
+    <div class="picsum-img-wrapper">
+      <img src="../../assets/o2.webp" alt="Slide 2">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide id="three">
+    <div class="picsum-img-wrapper">
+      <img src="../../assets/o3.jpg" alt="Slide 3">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide id="four">
+    <div class="picsum-img-wrapper">
+    <img src="../../assets/o4.jpg" alt="Slide 4">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide id="five">
+    <div class="picsum-img-wrapper">
+      <img src="../../assets/o5.jpg" alt="Slide 5">
+    </div>
+  </ng-template>
 
- </div>
+  <ng-template ngbSlide id="six">
+    <div class="picsum-img-wrapper">
+      <img src="../../assets/o6.jpg" alt="Slide 6">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide id="seven">
+    <div class="picsum-img-wrapper">
+      <img src="../../assets/o7.jpg" alt="Slide 7">
+    </div>
+  </ng-template>
+    <ng-template ngbSlide id="eight">
+      <div class="picsum-img-wrapper">
+        <img src="../../assets/o8.jpg" alt="Slide 8">
+      </div>
+  </ng-template>
+  <ng-template ngbSlide id="nine">
+    <div class="picsum-img-wrapper">
+      <img src="../../assets/o9.jpg" alt="Slide 9">
+    </div>
+</ng-template>
+<ng-template ngbSlide id="ten">
+  <div class="picsum-img-wrapper">
+    <img src="../../assets/o10.jpg" alt="Slide 10">
+  </div>
+</ng-template>
+<ng-template ngbSlide id="eleven">
+  <div class="picsum-img-wrapper">
+    <img src="../../assets/obro14.jpg" alt="Slide 11">
+  </div>
+</ng-template>
+<ng-template ngbSlide id="twelv">
+  <div class="picsum-img-wrapper">
+    <img src="../../assets/obro22.jpg" alt="Slide 12">
+  </div>
+</ng-template>
+<ng-template ngbSlide id="thrteen">
+  <div class="picsum-img-wrapper">
+    <img src="../../assets/obro18.webp" alt="Slide 13">
+  </div>
+</ng-template>
+  
+</ngb-carousel> 
+
+<div class="text-center">
+  <button (click)="navigateToSlide('four')">Go to Slide Four</button>
+  <button (click)="getToPrev()">Prev</button>
+  <button (click)="goToNext()">Next</button>
+  <button (click)="stopCarousel()">Pause</button>
+</div>
+
+<router-outlet></router-outlet>

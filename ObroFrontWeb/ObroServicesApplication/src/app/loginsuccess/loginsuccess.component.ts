@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-loginsuccess',
@@ -7,34 +8,33 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./loginsuccess.component.css']
 })
 export class LoginsuccessComponent implements OnInit {
-
+  @ViewChild('ngcarousel', { static: true }) ngCarousel: NgbCarousel;
   constructor() { }
 
   ngOnInit(): void {
   }
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: true,
-    navSpeed: 1000,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 2
-      },
-      730: {
-        items: 3
-      },
-      740: {
-        items: 1
-      }
-    },
-    nav: true
+  navigateToSlide(item) {
+    this.ngCarousel.select(item);
+    console.log(item)
   }
 
+  // Move to previous slide
+  getToPrev() {
+    this.ngCarousel.prev();
+  }
+
+  // Move to next slide
+  goToNext() {
+    this.ngCarousel.next();
+  }
+
+  // Pause slide
+  stopCarousel() {
+    this.ngCarousel.pause();
+  }
+
+  // Restart carousel
+  restartCarousel() {
+    this.ngCarousel.cycle();
+  }
 }

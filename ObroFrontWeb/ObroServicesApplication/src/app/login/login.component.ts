@@ -18,10 +18,11 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser(){
+    console.log("Logging in....")
     this._service.loginUserFormRemot(this.user).subscribe(
       data=>{
         console.log("response are received");
-        this._router.navigate[('/loginsuccess')]
+        this._router.navigate(['loginsuccess'])
     },
       error=>
       {console.log("Exception occured");

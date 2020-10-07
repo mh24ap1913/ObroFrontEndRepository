@@ -1,0 +1,18 @@
+.logo-img{
+    height: 60px;
+}
+
+.btn btn-info{
+    text-align: center;
+}
+
+:host {
+    display: block;
+    background-color: black;
+    text-emphasis-color: white;
+   
+   }
+
+   h2.headertekst {
+    text-align: center;
+  }

@@ -1,14 +1,17 @@
-<mat-toolbar color="primary">
-  <span>Lets Play</span>
+<mat-toolbar color="Secondary">
+  <a href="#" class="pull-left"><img class="logo-img" src="../../assets/logo.jpg" alt=" "></a>
+  <marquee style="color:black;"direction = "left" behavior=scroll 
+  loop="">Welcome To ObroServices,Your Need Our Service</marquee>
+
    </mat-toolbar>
-   
-<div class="container" style="max-width: 600px;background-color: turquoise;">
-    <h2>Obro Services Login</h2>
+   <br><br>
+<div class="container" style="max-width: 600px;background-color: rgb(238, 234, 241);">
+    <h2 class="headertekst">Obro Services Login</h2>
     <form #loginform="ngForm" (ngSubmit)="loginUser()">
       {{loginform.form.valid}}
       <small class="text-danger">{{msg}}</small>
       <div class="form-group">
-        <label for="username">username:</label>
+        <label for="username">Username:</label>
         <input type="username" class="form-control" id="username" placeholder="Enter username" name="username" [(ngModel)]="user.username" required  #username="ngModel"
         [class.is-invalid]="username.invalid && username.touched">
         <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username are required</small>
@@ -25,7 +28,10 @@
       <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-info" [routerLink]="['/loginsuccess']">Login</button>
     </form>
     <small class="float-right" [routerLink]="['/registration']">New User? Register Here</small>
-  </div>
+  </div><br><br><br><br><br><br><br><br><br><br>
+  <marquee direction = "left" class="mar">On Book Your Service Upto 7% CashBack(8855843016,02382-227766)</marquee>
+
+
   <footer class="footer bg-dark fixed-bottom">
     <div class="text-white text-right mr-3">
       Copyright goes only obro
